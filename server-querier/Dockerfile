@@ -1,0 +1,15 @@
+FROM node:alpine
+
+WORKDIR /server
+
+ENV MONGODB_URL="" 
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY ./ ./
+
+EXPOSE 8000
+
+CMD [ "node", "index.js" ]
