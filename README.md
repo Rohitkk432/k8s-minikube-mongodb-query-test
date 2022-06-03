@@ -1,4 +1,5 @@
-# k8s-minikube-test
+# k8s-minikube-mongodb-query-test
+
 creating mongodb instance and querying it from Node Express server in minikube env
 
 ## Diagram format of the K8s architecture
