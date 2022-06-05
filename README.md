@@ -1,6 +1,6 @@
 # k8s-minikube-mongodb-query-test
 
-creating mongodb instance and querying it from Node Express server in minikube env
+creating mongodb instance and querying it from Node Express server in minikube env , you can also test it with react client
 
 ## Diagram format of the K8s architecture
 <img width="700" alt="image" src="https://user-images.githubusercontent.com/74586376/171887212-5dcda6ab-864a-4a11-bd31-58f1f564444c.png">
@@ -76,13 +76,18 @@ kubectl apply -f server-app-service.yaml
   <li>To check the server url/ip: <code>minikube service server-app-service</code></li>
 </ul>
 
-Then you can check the end points 
+Then you can check the end points using postman / client built:
 
-- /
-- /allusers <code>GET req</code>
-- /adduser <code>POST req</code> (check using postman with body raw json { "name":"name" , "email":"email" })
+### Installing client
 
-Additional Commands you can try
+<ul>
+  <li>add server-url in query-client/src/functions.js to variable SERVER_URL </li>
+  <li>Open terminal in query-client folder and execute : <code>npm install</code></li>
+  <li>Then start the client <code>npm start</code></li>
+  <li>Then you can check the endpoints using the UI made</li>
+</ul>
+
+### Additional Commands you can try
 ```
 To check pods:
 kubectl get pod
